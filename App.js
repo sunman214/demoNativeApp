@@ -5,7 +5,8 @@ import CategoryItem from './components/categoryItem';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <CategoryItem/>
+      <CategoryItem/>
       <CategoryItem/>
       <StatusBar style="auto" />
     </View>
@@ -15,8 +16,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems:'stretch',
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    paddingLeft:16,
+    paddingRight:16
   },
 });
