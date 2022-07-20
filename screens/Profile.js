@@ -74,7 +74,7 @@ function Profile() {
               datasets: [
                 {
                   data: populations.map(item =>
-                    Math.floor(item.Population / 1000_000, 0)
+                    Math.floor(item.Population / 1000000, 0)
                   )
                 }
               ],

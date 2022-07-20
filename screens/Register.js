@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {isValidEmail, isValidPassword} from '../utility/Validation';
+import {auth, firebaseDatabase} from '../firebase/firebase';
 
 function Register(props) {
   //navigation router
@@ -34,6 +35,7 @@ function Register(props) {
     Keyboard.addListener('keyboardDidHide', () => {
       setKeyboardShow(false);
     });
+    const xx = auth;
   });
 
   return (

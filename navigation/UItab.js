@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import {Setting, FoodGrid, FoodList, Profile} from '../screens';
+import {Setting, FoodGrid, FoodList, Profile, Chat} from '../screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator();
@@ -18,7 +18,9 @@ const screenOptions = ({route}) => ({
         ? 'heart'
         : screenName == 'FoodGrid'
           ? 'star'
-          : screenName == 'Settings' ? 'cogs' : 'user';
+          : screenName == 'Settings'
+            ? 'cogs'
+            : screenName == 'Profile' ? 'user' : 'comment';
     return (
       <Icon name={iconName} size={22} color={focused ? 'white' : 'blue'} />
     );
@@ -39,6 +41,7 @@ function UITab() {
       />
       <Tab.Screen name="Settings" component={Setting} />
       <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Chat" component={Chat} />
     </Tab.Navigator>
   );
 }
